@@ -1,0 +1,11 @@
+.project-input-field {
+  padding: $project-gutter-sm;
+  border: 1px solid $project-color-gray-01;
+}
+
+.project-input-error-message {
+  color: $project-color-danger;
+  font-size: $project-font-size-sm;
+  margin-left: auto;
+  margin-top: 0.5rem;
+}

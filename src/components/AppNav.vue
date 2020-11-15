@@ -1,33 +1,42 @@
 <template>
-  <div>
-    <router-link :to="{ name: 'home' }">{{ $t('ROUTES.HOME') }}</router-link>
-    <div>
-      <button
-        v-for="(value, key) in LOCALES"
-        :key="key"
-        @click="onLocaleChange(key)"
-      >
-        {{ value }}
-      </button>
-    </div>
-    <div v-if="loggedIn">
-      <app-button class="cf-u-ml-sm" @click="logout">
-        {{ $t('COMMON.LOGOUT') }}
-      </app-button>
-    </div>
-    <div v-else>
-      <router-link
-        class="cf-c-navbar__nav-item"
-        :to="{ name: 'login' }"
-        active-class="is-active"
-        >{{ $t('ROUTES.LOGIN') }}
-      </router-link>
-      <router-link
-        class="cf-c-navbar__nav-item"
-        :to="{ name: 'register' }"
-        active-class="is-active"
-        >{{ $t('ROUTES.REGISTER') }}
-      </router-link>
+  <div class="project-c-navbar">
+    <div class="project-c-navbar__ctn-inner">
+      <div class="project-c-navbar-languages">
+        <app-button
+          v-for="(value, key) in LOCALES"
+          :key="key"
+          @click="onLocaleChange(key)"
+          class-name="project-btn-base project-u-mx"
+        >
+          {{ value }}
+        </app-button>
+      </div>
+
+      <router-link :to="{ name: 'home' }" class="project-c-navbar__logo">{{
+        $t('ROUTES.HOME')
+      }}</router-link>
+
+      <div class="project-c-navbar-items">
+        <div v-if="loggedIn">
+          <app-button @click="logout">
+            {{ $t('COMMON.LOGOUT') }}
+          </app-button>
+        </div>
+        <div v-else>
+          <router-link
+            :to="{ name: 'login' }"
+            active-class="is-active"
+            class="project-c-navbar__nav-item"
+            >{{ $t('ROUTES.LOGIN') }}
+          </router-link>
+          <router-link
+            :to="{ name: 'register' }"
+            active-class="is-active"
+            class="project-c-navbar__nav-item"
+            >{{ $t('ROUTES.REGISTER') }}
+          </router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>

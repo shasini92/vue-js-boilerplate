@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+  font-family: $project-font-stack;
+  font-size: 16px;
+  line-height: $project-font-line-height-stack;
+  background-color: $project-color-background;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+  }
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 0.5em;
+  line-height: $project-font-line-height-xs;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: $project-font-size-xxl;
+}
+
+h2 {
+  font-size: $project-font-size-xl;
+}
+
+h3 {
+  font-size: $project-font-size-lg;
+}
+
+h4 {
+  font-size: $project-font-size-md;
+}
+
+h5 {
+  font-size: $project-font-size-stack;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+ol,
+ul,
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+th {
+  text-align: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+hr {
+  margin-top: $project-gutter;
+  margin-bottom: $project-gutter;
+  border: 0;
+  border-top: 1px solid $project-color-gray-01;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}

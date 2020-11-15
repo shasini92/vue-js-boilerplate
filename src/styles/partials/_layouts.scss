@@ -1,0 +1,27 @@
+/**
+ * @name Conformio - Layouts
+ */
+
+// vue base layout
+
+#app {
+  height: 100%;
+}
+
+// App layout
+
+.project-l-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-l-app__ctn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-self: center;
+  width: 100%;
+  max-width: $project-size-main-container;
+  margin: 0 auto;
+}

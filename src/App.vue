@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <app-nav />
-    <app-loader />
-    <img src="./assets/logo.png" />
-    <router-view />
+    <div class="project-l-app">
+      <app-nav />
+      <app-loader />
+      <main class="project-l-app__ctn">
+        <router-view />
+      </main>
+    </div>
   </div>
 </template>
 
@@ -20,16 +23,7 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
 
 <style lang="sass">
 @import '/styles/app.scss';

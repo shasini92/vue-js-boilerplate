@@ -1,0 +1,236 @@
+/**
+ * @name Conformio - SASS mixins
+ */
+
+@mixin input-text-color($color) {
+  -webkit-text-fill-color: $color;
+  color: $color;
+}
+
+@mixin input-clear {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin full-size {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-1 {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@mixin text-hover {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin button-clear {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+@mixin outline-default {
+  outline-color: rgb(77, 144, 254); // #4D90FE
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+@mixin focus-default($inset: false) {
+  @if ($inset) {
+    box-shadow: 0 0 0 0.2rem $project-color-focus inset;
+  } @else {
+    box-shadow: 0 0 0 0.2rem $project-color-focus;
+  }
+  outline: 0;
+}
+
+@mixin focus-light {
+  outline-color: $project-color-outline-gray-light;
+}
+
+@mixin project-input-ctn {
+  border: 1px solid $project-color-border-main;
+  border-radius: $project-radius-sm;
+  background-color: $project-color-white;
+}
+
+@mixin project-input-ctn-has-error {
+  border-color: $project-color-danger;
+}
+
+@mixin project-input-ctn-has-text {
+  border-color: $project-color-input-has-text-border;
+}
+
+@mixin css-shape-arrow-down($color: $project-color-primary, $size: 5px) {
+  border-style: solid;
+  border-width: $size $size 0;
+  border-color: $color transparent transparent;
+}
+
+@mixin error-msg {
+  display: block;
+  margin-top: 0.5em;
+  font-size: $project-font-size-sm;
+  color: $project-color-danger;
+}
+
+@mixin dw-box-heading {
+  border-bottom: 1px solid $project-color-gray-01;
+  border-radius: 0 0 $project-radius-sm $project-radius-sm;
+  box-shadow: $project-c-shadow-default;
+  height: $project-size-dw-box-heading-height;
+  position: relative;
+}
+
+@mixin table-style {
+  border-bottom: 1px solid $project-color-gray-01;
+
+  th,
+  td {
+    padding: $project-gutter-075;
+    border: 1px solid $project-color-gray-01;
+  }
+
+  th {
+    font-weight: bold;
+    background-color: $project-color-gray;
+  }
+}
+
+@mixin list-regular {
+  margin-top: $project-gutter;
+  margin-bottom: $project-gutter;
+  padding-left: $project-gutter-md;
+}
+
+@mixin no-content-text {
+  padding: $project-gutter;
+  opacity: 0.4;
+  text-align: center;
+  font-weight: bold;
+  color: $project-color-gray-03;
+}
+
+@mixin box-outline(
+  $default-border-color: $project-color-border-main,
+  $default-background-color: $project-color-white
+) {
+  border: 1px solid $default-border-color;
+  border-radius: $project-radius;
+  background-color: $default-background-color;
+  box-shadow: $project-c-shadow-default;
+  cursor: default;
+  transition: box-shadow $project-animation-speed-fast;
+
+  &:hover {
+    box-shadow: $project-c-shadow-lg;
+  }
+}
+
+@mixin media($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin radio-dot-active-selector($selector) {
+  #{$selector} {
+    .project-c-radio-dot:after {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin data-card-highlight-title {
+  font-size: $project-font-size-sm;
+  font-weight: normal;
+  line-height: 2;
+  color: $project-color-primary;
+  text-transform: uppercase;
+}
+
+@mixin data-card-text-default {
+  font-size: $project-font-size-sm;
+  font-weight: bold;
+  line-height: 1.4;
+  color: $project-color-gray-03;
+}
+
+@mixin select-native-right-icon {
+  @include flex-center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: $project-size-select-native-right-icon-width;
+  pointer-events: none;
+
+  &:after {
+    content: "";
+    @include css-shape-arrow-down;
+  }
+}
+
+@mixin shape-circle($size: 1.25rem) {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+@mixin shape-box($size: 1.25rem) {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: $size;
+  height: $size;
+  background-color: currentColor;
+}

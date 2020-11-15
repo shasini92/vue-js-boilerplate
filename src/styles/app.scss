@@ -1,7 +1,6 @@
 /* Vivify Ideas - Import all scss files here */
 
-@import
-  'variables',
-  'components/buttons',
-  'components/login',
-  'components/register'
+@import "partials/variables", "partials/mixins", "partials/reset",
+  "partials/base", "partials/layouts", "components/buttons", "components/login",
+  "components/register", "components/navbar", "partials/utility",
+  "components/inputs";

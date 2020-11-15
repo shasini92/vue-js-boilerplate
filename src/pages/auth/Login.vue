@@ -2,25 +2,26 @@
   <ValidationObserver
     ref="loginForm"
     @submit.prevent
-    class="ww-c-login-form"
     tag="form"
+    class="project-c-login"
   >
     <ValidationProvider
       v-slot="{ errors }"
       :name="$t('ACCOUNT.EMAIL')"
       rules="required|email"
       tag="div"
-      class="ww-c-login-form__row"
+      class="project-c-login__input-group"
     >
       <app-input
         :label="$t('ACCOUNT.EMAIL')"
+        :placeholder="$t('ACCOUNT.EMAIL')"
         :value="form.email"
         :errors="apiErrors"
         @input="form.email = $event"
         type="email"
         field-name="email"
       />
-      <span class="ww-c-login-form__error-message">
+      <span>
         {{ errors[0] }}
       </span>
     </ValidationProvider>
@@ -30,25 +31,26 @@
       :name="$t('ACCOUNT.PASSWORD')"
       rules="required"
       tag="div"
-      class="ww-c-login-form__row"
+      class="project-c-login__input-group"
     >
       <app-input
         :label="$t('ACCOUNT.PASSWORD')"
+        :placeholder="$t('ACCOUNT.PASSWORD')"
         :value="form.password"
         :errors="apiErrors"
         @input="form.password = $event"
         field-name="password"
         type="password"
       />
-      <span class="ww-c-login-form__error-message">
+      <span>
         {{ errors[0] }}
       </span>
     </ValidationProvider>
 
-    <button
-      class="project-btn-base"
+    <app-button
       v-text="$t('COMMON.SUBMIT')"
       @click="handleLogin"
+      class-name="project-btn-base"
     />
   </ValidationObserver>
 </template>

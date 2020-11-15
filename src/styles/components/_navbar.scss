@@ -1,0 +1,57 @@
+.project-c-navbar {
+  display: flex;
+  min-height: $project-size-navbar;
+  background: $project-color-primary;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: $project-z-index-navbar;
+}
+
+.project-c-navbar__ctn-inner {
+  display: flex;
+  justify-content: space-between;
+  min-height: $project-size-navbar;
+  width: 100%;
+  max-width: $project-size-main-container;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.project-c-navbar__nav-item {
+  padding: $project-gutter-sm;
+  color: $project-color-white;
+  text-transform: uppercase;
+
+  &:hover,
+  &.is-active {
+    color: $project-color-primary-light;
+  }
+}
+
+.project-c-navbar__logo-ctn {
+  flex: 1;
+  justify-content: center;
+}
+
+.project-c-navbar__logo {
+  @extend .project-c-navbar__nav-item;
+  align-self: center;
+}
+
+.project-c-navbar-items {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.project-c-navbar-languages {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.project-c-navbar__profile {
+  @include flex-align-center;
+}

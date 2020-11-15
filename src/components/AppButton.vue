@@ -5,7 +5,7 @@
     :disabled="disabled"
     @click="$emit('click')"
   >
-    <div class="cf-c-btn--with-icon__icon" v-if="this.$slots.icon">
+    <div v-if="this.$slots.icon">
       <slot name="icon"></slot>
     </div>
     <slot />
@@ -85,16 +85,16 @@ export default {
 
   computed: {
     classes () {
-      return ''
+      return this.className ? ` ${this.className}` : ''
       //   return `
-      //     cf-c-btn cf-c-btn--${this.variation}
-      //     cf-c-btn--${this.size}
-      //     ${this.fullWidth ? ' cf-c-btn--full' : ''}
-      //     ${this.capitalized ? ' cf-c-btn--capitalized' : ''}
-      //     ${this.uppercased ? ' cf-c-btn--uppercased' : ''}
-      //     ${this.heightSm ? ' cf-c-btn--height-sm' : ''}
-      //     ${this.$slots.icon ? ' cf-c-btn--with-icon' : ''}
-      //     ${this.paddingSmall ? ` cf-c-btn--pad-hor-sm` : ''}
+      //     project-c-btn project-c-btn--${this.variation}
+      //     project-c-btn--${this.size}
+      //     ${this.fullWidth ? ' project-c-btn--full' : ''}
+      //     ${this.capitalized ? ' project-c-btn--capitalized' : ''}
+      //     ${this.uppercased ? ' project-c-btn--uppercased' : ''}
+      //     ${this.heightSm ? ' project-c-btn--height-sm' : ''}
+      //     ${this.$slots.icon ? ' project-c-btn--with-icon' : ''}
+      //     ${this.paddingSmall ? ` project-c-btn--pad-hor-sm` : ''}
       //     ${this.className ? ` ${this.className}` : ''}
       //     `
     }

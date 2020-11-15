@@ -2,15 +2,15 @@
   <ValidationObserver
     ref="registerForm"
     @submit.prevent
-    class="ww-c-login-form"
     tag="form"
+    class="project-c-register"
   >
     <ValidationProvider
       v-slot="{ errors }"
       :name="$t('ACCOUNT.FIRST_NAME')"
       rules="required"
       tag="div"
-      class="ww-c-login-form__row"
+      class="project-c-register__input-group"
     >
       <app-input
         :label="$t('ACCOUNT.FIRST_NAME')"
@@ -20,7 +20,7 @@
         field-name="first_name"
       />
 
-      <span class="ww-c-login-form__error-message">
+      <span class="project-input-error-message">
         {{ errors[0] }}
       </span>
     </ValidationProvider>
@@ -30,7 +30,7 @@
       :name="$t('ACCOUNT.LAST_NAME')"
       rules="required"
       tag="div"
-      class="ww-c-login-form__row"
+      class="project-c-register__input-group"
     >
       <app-input
         :label="$t('ACCOUNT.LAST_NAME')"
@@ -40,7 +40,7 @@
         field-name="last_name"
       />
 
-      <span class="ww-c-login-form__error-message">
+      <span class="project-input-error-message">
         {{ errors[0] }}
       </span>
     </ValidationProvider>
@@ -50,7 +50,7 @@
       :name="$t('ACCOUNT.EMAIL')"
       rules="required|email"
       tag="div"
-      class="ww-c-login-form__row"
+      class="project-c-login__input-group"
     >
       <app-input
         :label="$t('ACCOUNT.EMAIL')"
@@ -60,7 +60,7 @@
         type="email"
         field-name="email"
       />
-      <span class="ww-c-login-form__error-message">
+      <span class="project-input-error-message">
         {{ errors[0] }}
       </span>
     </ValidationProvider>
@@ -70,7 +70,7 @@
       :name="$t('ACCOUNT.PASSWORD')"
       rules="required"
       tag="div"
-      class="ww-c-login-form__row"
+      class="project-c-login__input-group"
     >
       <app-input
         :label="$t('ACCOUNT.PASSWORD')"
@@ -80,7 +80,7 @@
         field-name="password"
         type="password"
       />
-      <span class="ww-c-login-form__error-message">
+      <span class="project-input-error-message">
         {{ errors[0] }}
       </span>
     </ValidationProvider>
@@ -90,7 +90,7 @@
       :name="$t('ACCOUNT.RETYPE_PASSWORD')"
       rules="required|confirmed:Password"
       tag="div"
-      class="ww-c-login-form__row"
+      class="project-c-login__input-group"
     >
       <app-input
         :label="$t('ACCOUNT.RETYPE_PASSWORD')"
@@ -99,15 +99,15 @@
         @input="form.retypePassword = $event"
         type="password"
       />
-      <span class="ww-c-login-form__error-message">
+      <span class="project-input-error-message">
         {{ errors[0] }}
       </span>
     </ValidationProvider>
 
-    <button
-      class="project-btn-base"
+    <app-button
       v-text="$t('COMMON.SUBMIT')"
       @click="handleRegister"
+      class-name="project-btn-base"
     />
   </ValidationObserver>
 </template>

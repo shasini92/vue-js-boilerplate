@@ -1,0 +1,223 @@
+/* Font */
+
+$project-font-stack: "Open Sans", sans-serif;
+
+$project-font-size-stack: 1rem;
+$project-font-size-xxl: 1rem * 2.5; // 40px;
+$project-font-size-xl: 1rem * 2; // 32px;
+$project-font-size-lg: 1rem * 1.5; // 24px;
+$project-font-size-md: 1rem * 1.25; // 20px;
+$project-font-size-09: 1rem * 0.9;
+$project-font-size-sm: 1rem * 0.75; // 12px;
+$project-font-size-xs: 1rem * 0.625; // 10px;
+
+$project-font-line-height-stack: 1.5;
+$project-font-line-height-sm: 1.3;
+$project-font-line-height-xs: 1.2;
+
+/* Colors */
+
+$project-color-white: #ffffff;
+$project-color-black: #000000;
+$project-color-transparent: rgba(0, 0, 0, 0);
+$project-color-transparent-07: rgba(0, 0, 0, 0.7);
+
+$project-color-gray: #f2f4f8;
+$project-color-gray-01: #e5e7e8;
+$project-color-gray-02: #9f9ea0;
+$project-color-gray-03: #676767;
+$project-color-gray-04: #444444;
+
+$project-color-unassigned: #bebebe;
+$project-color-gray-canceled: #818181;
+$project-color-brown-01: #d2b2a3;
+
+$project-color-primary: #4788c6;
+$project-color-primary-lighter: #f9fdff;
+$project-color-primary-light: #c1e7ff;
+$project-color-primary-dark: #244c73;
+$project-color-primary-plan: #4789c6;
+$project-color-danger: #f82f47;
+$project-color-danger-dark: #c63737;
+$project-color-danger-light: #b97b83;
+$project-color-warning: #f0a122;
+$project-color-warning-dark: #fa6400;
+$project-color-warning-light: #fff01c;
+$project-color-secondary: #52a370;
+$project-color-secondary-light: #aedca2;
+$project-color-secondary-dark: #2e5d3f;
+$project-color-cerise: #d760c1;
+$project-color-teal: #20b8bb;
+$project-color-amber: #f5a623;
+$project-color-gold: #f5e723;
+$project-color-sky-blue: #7fcaf8;
+$project-color-gray-blue: #a5c0d9;
+$project-color-pink: #cf6ebe;
+$project-color-rose: #dc8494;
+$project-color-blue-green: #42799c;
+$project-color-ocean-green: #0f7f7b;
+
+$project-color-background: #f2f4f8;
+$project-color-navbar: $project-color-primary-dark;
+$project-color-navbar-plan: $project-color-primary-dark;
+
+$project-color-outline-gray-light: #fbfbfb;
+
+$project-color-border-main: #e5e7e8;
+$project-color-input-placeholder: #9f9ea0;
+$project-color-input-has-text-border: #9f9ea0;
+$project-color-input-has-text-border-light: rgba(158, 157, 159, 0.7);
+$project-color-input-disabled-bg: #f2f4f8;
+
+$project-color-focus: #80d1ff;
+
+$project-color-sidebar-bg: #ffffff;
+$project-color-sidebar-icon: #e5e7e8;
+
+$project-color-discussion-card-border-active: #a5c5e3;
+$project-color-discussion-wrap-bg: #e6e8ec;
+$project-color-discussion-wrap-border: #d6d6d6;
+$project-color-replies-left-indent-active: #e8f7ff;
+
+$project-color-doc-blade-overlay: rgba(0, 0, 0, 0.2);
+$project-color-doc-blade-shortcode-bg: #fce7c4;
+$project-color-doc-blade-type-1-bg: #ffffff;
+$project-color-doc-blade-type-2-bg: #aedca2;
+$project-color-doc-blade-type-2-border: #008833;
+$project-color-doc-blade-type-3-border: #52a370;
+$project-color-doc-blade-type-3-bg: #f6fbf5;
+$project-color-doc-blade-type-4-bg: #e6f4e3;
+
+$project-color-modal-overlay: rgba(0, 0, 0, 0.5);
+
+$project-color-missing-data-background: rgba(245, 166, 35, 0.1);
+$project-color-material-to-be-reviewed: #0f7f7f;
+
+/* Radius */
+
+$project-radius-round: 50%;
+$project-radius-pill: 100px;
+$project-radius: 4px;
+$project-radius-sm: 2px;
+$project-radius-lg: 0.5rem;
+$project-radius-xl: 0.75rem;
+
+/* Spacings */
+
+$project-gutter: 1rem;
+$project-gutter-xs: $project-gutter * 0.25;
+$project-gutter-sm: $project-gutter * 0.5;
+$project-gutter-075: $project-gutter * 0.75;
+$project-gutter-md: $project-gutter * 1.5;
+$project-gutter-lg: $project-gutter * 2;
+$project-gutter-xl: $project-gutter * 3;
+$project-gutter-xxl: $project-gutter * 4;
+$project-gutter-25: $project-gutter * 2.5;
+$project-gutter-35: $project-gutter * 3.5;
+
+/* Widths */
+$project-width-md: 5.5rem;
+$project-width-lg: 7rem;
+$project-width-xl: 8.5rem;
+$project-width-xxl: 9.5rem;
+
+/* Shadows */
+
+$project-c-shadow-default: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+$project-c-shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$project-c-shadow-progress-bar-micro: 0 2px 4px 0 rgba(197, 184, 184, 0.1);
+$project-c-shadow-app-dropdown: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+  0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+$project-c-shadow-modal-box: 0 4px 10px 0 rgba(0, 0, 0, 0.3),
+  0 2px 4px 0 rgba(0, 0, 0, 0.1);
+$project-c-shadow-accordion-item: 0 -4px 6px 0 rgba(0, 0, 0, 0.1);
+
+/* Sizes */
+
+$project-size-main-container: 1440px;
+$project-size-navbar: 5rem; // 80px
+$project-size-logo: 3.5rem; //56px
+$project-size-navbar-with-plan: 7.5rem; // 120px
+$project-size-avatar: 2.75rem; // 44px
+$project-size-avatar-sm: 2.375rem; // 38px
+$project-size-sidebar-width: 23.75rem; // 380px
+$project-size-sidebar-item: 2.5rem; // 40px
+$project-size-step-card-min-height: 21.5rem; // 344px
+$project-size-step-card-sec-row-min-height: 4.25rem; // 68px;
+$project-size-btn-default: 2em; // 32px
+$project-size-btn-icon: 2.2em; // 35.2px
+$project-size-btn-md: 2.5em; // 40px
+$project-size-btn-lg: 3em; // 48px
+$project-size-btn-sm: 2rem; // 24px
+$project-size-progress-bar: 1rem; // 16px
+$project-size-progress-bar-micro: 0.25rem; // 4px
+$project-size-input-lg: 3.5rem;
+$project-size-input: 3rem; // 48px
+$project-size-input-sm: 2rem;
+$project-size-input-md: 2.5rem;
+$project-size-input-xs: 1.5rem;
+$project-size-input-min-width: 17rem;
+$project-size-select-native-right-icon-width: 2.5rem;
+$project-size-radio-card-left-space: 3rem;
+$project-size-radio-label-left-space: 2rem;
+$project-size-radio-dot: 1rem;
+$project-size-labeled-input-left-space: 2em;
+$project-size-tabs-height: 4rem;
+$project-size-pill-tabs-height: 2.5rem;
+$project-size-onb-sidebar-card-height: 4rem;
+$project-size-onb-sidebar-left: 3.5rem;
+$project-size-dw-box-heading-height: 4rem;
+$project-size-add-logo: 7.5rem;
+$project-size-main-section-max-width: 38rem;
+$project-size-login-form-max-width: 23rem;
+$project-size-login-form-max-height: 23rem;
+
+$project-size-login-form-min-width: 15rem;
+$project-size-login-form-min-height: 15rem;
+
+$project-size-register-form-min-width: 15rem;
+$project-size-register-form-min-height: 30rem;
+
+$project-size-icon-xs: 0.625rem;
+$project-size-icon-sm: 1rem;
+$project-size-icon: 1.5rem;
+$project-size-icon-md: 1.75rem;
+$project-size-icon-lg: 2rem;
+$project-size-icon-xl: 2.75rem;
+$project-size-icon-xxxl: 6rem;
+
+$project-size-app-cube: 1.5rem;
+
+$project-form-switch-height: 1.5rem;
+$project-form-switch-height-sm: 1.25rem;
+$project-form-switch-width: 3rem;
+$project-form-switch-width-sm: 2.5rem;
+$project-form-switch-border-width: 0.25rem;
+$project-form-switch-border-width-sm: 0.175rem;
+
+$project-size-map-dot-size: 0.75rem;
+
+$project-size-collapsible-min-height: 2.5rem;
+
+$project-app-tag-height: 1.333em;
+
+$project-size-task-collapsible-height: 4.5rem;
+
+$project-size-onb-sidebar-actions-heigth: 5rem;
+
+/* Z-indexes */
+
+$project-z-index-sidebar: 1;
+$project-z-index-navbar: 2;
+$project-z-index-highlighted-blade-section: 1;
+$project-z-index-checkout-iframe: 3;
+$project-z-multiselect-dropdown-content: 1;
+$project-z-index-tabs-items: 1;
+$project-z-index-searchable-list: 1;
+$project-z-index-search-options: 1;
+$project-z-index-tooltip: 2;
+
+/* Animation speeds */
+
+$project-animation-speed-default: 0.6s;
+$project-animation-speed-fast: 0.3s;

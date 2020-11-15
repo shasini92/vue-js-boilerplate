@@ -2,8 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { authService } from '@apiServices/auth.service'
 import HelloWorld from '@/components/HelloWorld'
-import Login from '@authComponents/Login'
-import Register from '@authComponents/Register'
+import Login from '@/pages/auth/Login'
+import Register from '@/pages/auth/Register'
+import NotFoundPage from '@/pages/errors/404'
 import { each } from 'lodash'
 
 Vue.use(Router)
@@ -34,6 +35,15 @@ const router = new Router({
       meta: {
         redirectsAuthenticated: true
       }
+    },
+    {
+      name: '404',
+      path: '/404',
+      component: NotFoundPage
+    },
+    {
+      path: '*',
+      redirect: { name: '404' }
     }
   ]
 })

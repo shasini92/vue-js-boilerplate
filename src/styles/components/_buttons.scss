@@ -1,8 +1,25 @@
-/* Vivify Ideas - Buttons CSS */
-
 .project-btn-base {
-  width: 5rem;
-  height: $md-size;
-  background: $color-base;
-  color: $color-white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $project-size-btn-default;
+  padding: #{$project-size-btn-default * 0.053} $project-gutter-075 0 $project-gutter-075; // 0.053 vertical align fix
+  border: 0.125em solid transparent;
+  border-radius: $project-radius-sm;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  font-size: 1rem;
+  transition: all 0.15s ease-in-out;
+  background: $project-color-primary;
+  color: #fff;
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:focus {
+    @include focus-default;
+  }
 }

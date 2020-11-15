@@ -1,13 +1,21 @@
 <template>
-  <div>
-    <span> {{ label }} </span>
+  <div class="project-u-flex-justify-between">
+    <span class="project-u-my-auto"> {{ label }} </span>
     <input
       :value="value"
       @input="$emit('input', $event.target.value)"
       :type="type"
       :disabled="disabled"
+      class="project-input-field"
+      :placeholder="placeholder"
     />
-    <p v-for="error in errors[fieldName]" :key="error">{{ error }}</p>
+    <p
+      v-for="error in errors[fieldName]"
+      :key="error"
+      class="project-input-error-message"
+    >
+      {{ error }}
+    </p>
   </div>
 </template>
 
@@ -46,6 +54,12 @@ export default {
     },
 
     fieldName: {
+      type: String,
+      required: false,
+      default: ''
+    },
+
+    placeholder: {
       type: String,
       required: false,
       default: ''
