@@ -1,0 +1,336 @@
+/*
+ * Modals
+ *
+ * Note:
+ * - use <h5 class="project-c-modal__subheading">Some subtitle</h5> for bolded subheading text
+ * - use <span class="project-c-modal__text">Some text</span> (or <p> if you need bottom margin) for regular modal text
+ */
+
+// overrides
+
+.v--modal-overlay {
+  background-color: $project-color-modal-overlay;
+}
+
+.v--modal-background-click {
+  display: flex;
+  padding: $project-gutter;
+}
+
+.project-c-app-modal-wrapper {
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  margin: auto !important;
+  max-width: 25rem;
+  background-color: white;
+  text-align: left;
+  border-radius: $project-radius-xl;
+  box-shadow: $project-c-shadow-modal-box;
+  padding: 0;
+
+  &.v--modal-box.v--modal-box.v--modal-box {
+    overflow: visible;
+  }
+
+  &.project-c-app-modal-wrapper--min-width-23 {
+    min-width: 23rem;
+  }
+
+  &.project-c-app-modal-wrapper--width-23 {
+    max-width: 23rem;
+    min-width: 23rem;
+  }
+
+  &.project-c-app-modal-wrapper--max-width-53 {
+    max-width: 53rem;
+  }
+
+  &.project-c-app-modal-wrapper--max-width-63 {
+    max-width: 63rem;
+  }
+
+  &.project-c-app-modal-wrapper--max-width-38 {
+    max-width: 38rem;
+  }
+
+  &.project-c-app-modal-wrapper--max-width-25 {
+    max-width: 25rem;
+    min-width: 25rem;
+  }
+
+  &.project-c-app-modal-wrapper--max-width-27 {
+    max-width: 27rem;
+    min-width: 27rem;
+  }
+
+  &.project-c-app-modal-wrapper--min-width-44 {
+    min-width: 44rem;
+  }
+
+  &.project-c-app-modal-wrapper--min-width-42 {
+    min-width: 42rem;
+  }
+
+  &.project-c-app-modal-wrapper--modal-explorer {
+    min-width: 30rem;
+    max-width: none;
+
+    .project-c-modal-table {
+      width: auto;
+
+      .project-c-modal-table__td:first-child {
+        width: auto;
+      }
+    }
+  }
+
+  &.project-c-app-modal--no-border.project-c-app-modal-wrapper--approval {
+    .project-c-app-modal {
+      .project-c-app-modal__body {
+        border-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &.project-c-app-modal-wrapper--scrollable-body {
+    .project-c-app-modal__body {
+      max-height: calc(100vh - 12.5rem);
+      overflow: auto;
+    }
+  }
+
+  &.project-c-app-modal-wrapper--scrollable-body-md {
+    .project-c-app-modal__body {
+      max-height: calc(100vh - 22.5rem);
+      overflow: auto;
+    }
+  }
+
+  &.project-c-app-modal--header-underlined {
+    .project-c-app-modal {
+      .project-c-app-modal__header {
+        border-bottom: 1px solid $project-color-gray-01;
+        padding: $project-gutter 0 $project-gutter-sm;
+        margin: 0 $project-gutter;
+      }
+
+      .project-c-app-modal__body {
+        margin-bottom: 0;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+
+        .project-c-reg-section-form {
+          box-shadow: none;
+          border: none;
+          margin: $project-gutter-075 0;
+          padding: $project-gutter 0 0;
+        }
+      }
+
+      .project-c-app-modal__footer {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &.project-c-app-modal--flat {
+    .project-c-app-modal-wrapper {
+      border-radius: 0;
+      box-shadow: $project-c-shadow-default;
+    }
+
+    .project-c-app-modal__body {
+      padding-left: $project-gutter-xl;
+      padding-right: $project-gutter-lg;
+      padding-bottom: $project-gutter-xl;
+      margin-bottom: 0;
+    }
+
+    .project-c-app-modal__header > .project-c-icon {
+      color: $project-color-primary;
+    }
+  }
+
+  &.project-c-app-modal-wrapper--approval {
+    .project-c-app-modal__body {
+      margin: 0 $project-gutter;
+      padding: $project-gutter 0 0 0;
+      border-top: 1px solid $project-color-gray-01;
+
+      > .project-u-box {
+        max-height: 31rem;
+        min-height: 31rem;
+        height: 31rem;
+        overflow: auto;
+      }
+    }
+  }
+
+  &.project-c-app-modal--vulnerability {
+    .project-c-app-modal__header {
+      margin-bottom: 0;
+      font-size: 1.125rem;
+      line-height: 1.55;
+    }
+
+    .project-c-modal__text {
+      margin-bottom: 2.5rem;
+      line-height: 1.33;
+    }
+
+    .project-c-app-modal__body {
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  &.project-c-app-modal--stepper {
+    .project-c-app-modal__header {
+      margin-bottom: 0.75rem;
+      font-size: 1.125rem;
+      line-height: 1.56;
+      color: $project-color-black;
+    }
+
+    .project-c-app-modal__body {
+      margin-bottom: 2rem;
+
+      .project-c-searchable-list {
+        .project-c-searchable-list__search {
+          .project-c-input__field {
+            font-size: 0.75rem;
+            line-height: 1.33;
+            border-radius: 2px 2px 0 0;
+            border: 1px solid $project-color-gray-02;
+            background-color: $project-color-gray;
+
+            &::placeholder {
+              font-size: 0.75rem;
+              line-height: 1.33;
+            }
+
+            &:focus {
+              box-shadow: none;
+              border-color: $project-color-focus;
+            }
+          }
+        }
+
+        .project-c-searchable-list__items {
+          margin-top: -1px;
+          border-radius: 0 0 2px 2px;
+          max-height: 10.4rem;
+        }
+      }
+    }
+  }
+}
+
+// custom styles
+
+.project-c-app-modal__header {
+  padding: $project-gutter;
+  margin: 0;
+  line-height: $project-font-line-height-stack;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $project-gutter-sm;
+
+  > h4 {
+    margin-bottom: 0;
+    word-break: break-word;
+  }
+}
+
+.project-c-app-modal__body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 $project-gutter;
+  margin-bottom: $project-gutter;
+}
+
+.project-c-app-modal__footer {
+  display: flex;
+  padding: $project-gutter;
+  justify-content: flex-end;
+}
+
+.project-c-app-modal__footer-item {
+  &:not(:last-child) {
+    margin-right: $project-gutter;
+  }
+}
+
+.project-c-modal__subheading {
+  font-weight: bold;
+  line-height: $project-font-line-height-stack;
+  margin-bottom: $project-gutter-sm;
+}
+
+.project-c-modal__note {
+  font-size: $project-font-size-stack;
+  margin-bottom: $project-gutter-md;
+}
+
+.project-c-modal__text {
+  font-size: $project-font-size-sm;
+  color: $project-color-gray-03;
+}
+
+.project-v-modal-embedded {
+  position: absolute;
+  background-color: transparent;
+  background: transparent;
+  height: auto !important;
+  min-height: auto !important;
+  top: 35%;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .close {
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    top: -9px;
+  }
+}
+
+.wtlm {
+  display: inline-block;
+  border-bottom: 2px solid #4788c6;
+  position: relative;
+  margin-right: 24px;
+  cursor: pointer;
+  font-style: normal;
+  padding-right: 10px;
+  &::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    bottom: -2px;
+    right: 2px;
+    transform: translateX(50%);
+    background: url("./assets/italic-info-icon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.modal-layer-0 {
+  z-index: 998 !important;
+}
+
+.modal-layer-1 {
+  z-index: 999 !important;
+}
+
+.project-modal-black-center-txt {
+  text-align: center;
+  color: black;
+}

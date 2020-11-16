@@ -9,6 +9,7 @@ import Axios from 'axios'
 import { LOCALES } from './i18n'
 import { config } from './config'
 import { DEFAULT_LOCALE } from '@/constants'
+import VModal from 'vue-js-modal'
 
 require('./global-components')
 require('./vee-validate')
@@ -30,6 +31,7 @@ export function configureVueI18n () {
 }
 
 function configureVue () {
+  Vue.use(VModal, { componentName: 'v-modal' })
   configureVueI18n()
   configureHttp()
 }

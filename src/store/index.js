@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { account } from './modules/account.store'
+import { modals } from './modules/modals.store'
 
 Vue.use(Vuex)
 const state = {
@@ -23,7 +24,8 @@ const store = new Vuex.Store({
   actions,
   mutations,
   modules: {
-    account
+    account,
+    modals
   }
 })
 

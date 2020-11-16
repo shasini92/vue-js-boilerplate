@@ -17,7 +17,7 @@ const router = new Router({
       name: 'home',
       component: HelloWorld,
       meta: {
-        requiresAuth: true
+        // requiresAuth: true
       }
     },
     {

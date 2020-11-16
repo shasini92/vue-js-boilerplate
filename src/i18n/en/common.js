@@ -20,5 +20,6 @@ export const COMMON = {
   OR: 'or',
   OK: 'Ok',
   LOGOUT: 'Logout',
-  SUBMIT: 'Submit'
+  SUBMIT: 'Submit',
+  PROCEED: 'Proceed'
 }

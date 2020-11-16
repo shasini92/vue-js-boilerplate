@@ -6,6 +6,7 @@
       <main class="project-l-app__ctn">
         <router-view />
       </main>
+      <layered-modals />
     </div>
   </div>
 </template>
@@ -13,13 +14,30 @@
 <script>
 import AppNav from '@/components/AppNav'
 import AppLoader from '@/components/AppLoader'
+import LayeredModals from '@/components/modals/LayeredModals'
+import AppModal from '@/components/modals/AppModal'
+// import { mapMutations } from 'vuex'
 
 export default {
   name: 'App',
+
   components: {
     AppNav,
-    AppLoader
+    AppLoader,
+    LayeredModals,
+    AppModal
   }
+
+  // HOW TO USE MODALS
+  // created () {
+  //   this.ADD_LAYERED_MODALS({
+  //     modals: [AppModal, AppModal, AppModal]
+  //   })
+  // },
+
+  // methods: {
+  //   ...mapMutations('modals', ['ADD_LAYERED_MODALS'])
+  // }
 }
 </script>
 
