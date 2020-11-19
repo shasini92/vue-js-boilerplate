@@ -1,6 +1,49 @@
-# vue-boilerplate
+# vue-js-boilerplate
 
-> Boilerplate for VueJS
+### Main features:
+
+<div>
+  <ul>
+    <li>Predefined Login/Register/404 page</li>
+    <li>Predefined route guards</li>
+    <li>Predefined auth service for handling Login/Register.</li>
+    <li>Modular store</li>
+    <li>Basic SCSS preconfiguration with utility classes</li>
+    <li>Define global components in global-components.js</li>
+    <li>Define global aliases using webpack in ./build/webpack.base.conf.js</li>
+    <li><a href="https://kazupon.github.io/vue-i18n/" target="_blank">Vue i18n</a></li>
+    <li><a href="https://logaretm.github.io/vee-validate/" target="_blank">Vee Validate</a> (Define additional rules in vee-validate.js)</li>
+    <li>  <a href="https://euvl.github.io/vue-js-modal/" target="_blank">Vue Modal</a></li
+  </ul> 
+</div>
+
+ ### Define a global alias:
+  ```
+     alias: {
+        vue$: 'vue/dist/vue.esm.js',
+        '@': resolve('src'),
+        '@apiServices': resolve('src/api-services')
+      }
+  ```
+  
+ ### Modal adding example:  
+  ```
+  import AppModal from '@/components/modals/AppModal'
+
+  components: {
+    AppModal
+  },
+  
+  created () {
+    this.ADD_LAYERED_MODALS({
+      modals: [AppModal]
+    })
+  },
+
+  methods: {
+    ...mapMutations('modals', ['ADD_LAYERED_MODALS'])
+  }
+  ```
 
 ## Build Setup
 
