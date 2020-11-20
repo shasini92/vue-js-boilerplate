@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { account } from './modules/account.store'
-import { modals } from './modules/modals.store'
 import { BASE_MUTATIONS } from './mutation-types'
+import modules from './modules-import'
 
 Vue.use(Vuex)
 
@@ -25,10 +24,7 @@ const store = new Vuex.Store({
   getters,
   actions,
   mutations,
-  modules: {
-    account,
-    modals
-  }
+  modules
 })
 
 export default store
