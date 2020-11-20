@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { account } from './modules/account.store'
 import { modals } from './modules/modals.store'
+import { BASE_MUTATIONS } from './mutation-types'
 
 Vue.use(Vuex)
 
@@ -12,7 +13,7 @@ const state = {
 const getters = {}
 
 const mutations = {
-  SET_APP_LOADING (state, payload) {
+  [BASE_MUTATIONS.SET_APP_LOADING] (state, payload) {
     state.appLoading = payload
   }
 }

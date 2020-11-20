@@ -16,7 +16,8 @@ import AppNav from '@/components/AppNav'
 import AppLoader from '@/components/AppLoader'
 import LayeredModals from '@/components/modals/LayeredModals'
 import AppModal from '@/components/modals/AppModal'
-// import { mapMutations } from 'vuex'
+import { mapMutations } from 'vuex'
+import { MODAL_MUTATIONS } from '@store/mutation-types'
 
 export default {
   name: 'App',
@@ -26,18 +27,20 @@ export default {
     AppLoader,
     LayeredModals,
     AppModal
-  }
+  },
 
   // HOW TO USE MODALS
   // created () {
-  //   this.ADD_LAYERED_MODALS({
+  //   this.addLayeredModal({
   //     modals: [AppModal, AppModal, AppModal]
   //   })
   // },
 
-  // methods: {
-  //   ...mapMutations('modals', ['ADD_LAYERED_MODALS'])
-  // }
+  methods: {
+    ...mapMutations('modals', {
+      addLayeredModal: MODAL_MUTATIONS.ADD_LAYERED_MODALS
+    })
+  }
 }
 </script>
 
