@@ -114,6 +114,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import { COMMON_ROUTES } from '@/constants'
 
 export default {
   name: 'Register',
@@ -140,7 +141,7 @@ export default {
 
       try {
         await this.register(this.form)
-        this.$router.push({ name: 'home' })
+        this.$router.push({ name: COMMON_ROUTES.HOME })
       } catch (errors) {
         this.apiErrors = errors
       }

@@ -57,6 +57,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import { COMMON_ROUTES } from '@/constants'
 
 export default {
   name: 'Login',
@@ -83,7 +84,7 @@ export default {
 
       try {
         await this.login(this.form)
-        this.$router.push({ name: 'home' })
+        this.$router.push({ name: COMMON_ROUTES.HOME })
       } catch (errors) {
         this.apiErrors = errors
       }

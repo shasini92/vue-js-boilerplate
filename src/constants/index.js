@@ -16,3 +16,5 @@ const LOCALES = {
 const DEFAULT_LOCALE = 'en'
 
 export { API_ROUTE, BACKEND_HOSTNAMES, ENVIRONMENTS, DEFAULT_LOCALE, LOCALES }
+
+export * from './routes.constants'

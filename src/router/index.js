@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { authService } from '@apiServices/auth.service'
 import HelloWorld from '@/components/HelloWorld'
-import Login from '@/pages/auth/Login'
-import Register from '@/pages/auth/Register'
 import NotFoundPage from '@/pages/errors/404'
 import { each } from 'lodash'
+import { AUTH_ROUTES, COMMON_ROUTES } from '@/constants'
+import authRoutes from './auth.router'
 
 Vue.use(Router)
 
@@ -14,36 +14,21 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: COMMON_ROUTES.HOME,
       component: HelloWorld,
       meta: {
         // requiresAuth: true
       }
     },
+    ...authRoutes,
     {
-      name: 'login',
-      path: '/login',
-      component: Login,
-      meta: {
-        redirectsAuthenticated: true
-      }
-    },
-    {
-      name: 'register',
-      path: '/register',
-      component: Register,
-      meta: {
-        redirectsAuthenticated: true
-      }
-    },
-    {
-      name: '404',
+      name: COMMON_ROUTES.NOT_FOUND,
       path: '/404',
       component: NotFoundPage
     },
     {
       path: '*',
-      redirect: { name: '404' }
+      redirect: { name: COMMON_ROUTES.NOT_FOUND }
     }
   ]
 })
@@ -52,9 +37,9 @@ router.beforeEach((to, from, next) => {
   const loggedIn = authService.isLoggedIn()
 
   if (to.meta.requiresAuth && !loggedIn) {
-    next({ name: 'login' })
+    next({ name: AUTH_ROUTES.LOGIN })
   } else if (to.meta.redirectsAuthenticated && loggedIn) {
-    next({ name: 'home' })
+    next({ name: COMMON_ROUTES.HOME })
   } else if (to.meta.guards) {
     each(to.meta.guards, guard => {
       guard(to, from, next)

@@ -12,9 +12,11 @@
         </app-button>
       </div>
 
-      <router-link :to="{ name: 'home' }" class="project-c-navbar__logo">{{
-        $t('ROUTES.HOME')
-      }}</router-link>
+      <router-link
+        :to="{ name: COMMON_ROUTES.HOME }"
+        class="project-c-navbar__logo"
+        >{{ $t('ROUTES.HOME') }}</router-link
+      >
 
       <div class="project-c-navbar-items">
         <div v-if="loggedIn">
@@ -24,13 +26,13 @@
         </div>
         <div v-else>
           <router-link
-            :to="{ name: 'login' }"
+            :to="{ name: AUTH_ROUTES.LOGIN }"
             active-class="is-active"
             class="project-c-navbar__nav-item"
             >{{ $t('ROUTES.LOGIN') }}
           </router-link>
           <router-link
-            :to="{ name: 'register' }"
+            :to="{ name: AUTH_ROUTES.REGISTER }"
             active-class="is-active"
             class="project-c-navbar__nav-item"
             >{{ $t('ROUTES.REGISTER') }}
@@ -43,14 +45,17 @@
 
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex'
-import { LOCALES } from '@/constants'
+import { LOCALES, AUTH_ROUTES, COMMON_ROUTES } from '@/constants'
+import { ACCOUNT_MUTATIONS } from '@store/mutation-types'
 
 export default {
   name: 'AppNav',
 
   data () {
     return {
-      LOCALES
+      LOCALES,
+      AUTH_ROUTES,
+      COMMON_ROUTES
     }
   },
 
@@ -59,11 +64,11 @@ export default {
   },
 
   methods: {
-    ...mapMutations('account', ['SET_LOCALE']),
+    ...mapMutations('account', { setLocale: ACCOUNT_MUTATIONS.SET_LOCALE }),
     ...mapActions('account', ['logout']),
 
     onLocaleChange (locale) {
-      this.SET_LOCALE(locale)
+      this.setLocale(locale)
     }
   }
 }
