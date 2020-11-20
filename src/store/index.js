@@ -4,6 +4,7 @@ import { account } from './modules/account.store'
 import { modals } from './modules/modals.store'
 
 Vue.use(Vuex)
+
 const state = {
   appLoading: false
 }

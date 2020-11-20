@@ -1,5 +1,5 @@
-import { COMMON } from './common'
-import { ACCOUNT } from './account'
-import { ROUTES } from './routes'
+import { COMMON } from './common.translations'
+import { ACCOUNT } from './account.translations'
+import { ROUTES } from './routes.translations'
 
 export { COMMON, ACCOUNT, ROUTES }
