@@ -1,3 +1,5 @@
+// Paddings
+
 .project-u-p-default {
   padding: $project-gutter;
 }
@@ -225,6 +227,8 @@
     padding-right: $project-gutter;
   }
 }
+
+// Margins
 
 .project-u-mr-none {
   margin-right: 0;
@@ -511,6 +515,8 @@
   margin: 0;
 }
 
+// Text transform and Fonts
+
 .project-u-uppercased {
   text-transform: uppercase;
 }
@@ -521,11 +527,6 @@
 
 .project-u-italic {
   font-style: italic;
-}
-
-.project-u-text-underlined {
-  text-decoration: underline;
-  text-decoration-color: currentColor;
 }
 
 .project-u-text-bold {
@@ -584,10 +585,6 @@
   font-size: $project-font-size-xxl;
 }
 
-.project-u-line-height-sm {
-  line-height: $project-font-line-height-sm;
-}
-
 .project-u-font-weight-normal {
   font-weight: normal;
 }
@@ -596,25 +593,15 @@
   font-weight: bold;
 }
 
-.project-u-bg-current-color {
-  background-color: currentColor;
-}
-
 .project-u-bg-white {
   background-color: $project-color-white;
-}
-
-.project-u-bg-gray {
-  background-color: $project-color-gray;
-}
-
-.project-u-bg-gray-01 {
-  background-color: $project-color-gray-01;
 }
 
 .project-u-bg-primary {
   background-color: $project-color-primary;
 }
+
+// Colors
 
 .project-u-color-primary {
   color: $project-color-primary;
@@ -636,20 +623,8 @@
   color: $project-color-secondary;
 }
 
-.project-u-collor-gray-02 {
-  color: $project-color-gray-02;
-}
-
 .project-u-color-secondary-light {
   color: $project-color-secondary-light;
-}
-
-.project-u-color-rose {
-  color: $project-color-rose;
-}
-
-.project-u-color-gray-canceled {
-  color: $project-color-gray-canceled;
 }
 
 .project-u-color-danger {
@@ -660,75 +635,7 @@
   color: $project-color-warning;
 }
 
-.project-u-color-warning-dark {
-  color: $project-color-warning-dark;
-}
-
-.project-u-color-gray-01 {
-  color: $project-color-gray-01;
-}
-
-.project-u-color-gray-02 {
-  color: $project-color-gray-02;
-}
-
-.project-u-color-unassigned {
-  color: $project-color-unassigned;
-}
-
-.project-u-color-gray-03 {
-  color: $project-color-gray-03;
-}
-
-.project-u-paragraph-color-gray {
-  p {
-    color: $project-color-gray-03;
-  }
-}
-
-.project-u-color-brown-01 {
-  color: $project-color-brown-01;
-}
-
-.project-u-color-cerise {
-  color: $project-color-cerise;
-}
-
-.project-u-color-ocean-green {
-  color: $project-color-ocean-green;
-}
-
-.project-u-color-teal {
-  color: $project-color-teal;
-}
-
-.project-u-color-amber {
-  color: $project-color-amber;
-}
-
-.project-u-color-gold {
-  color: $project-color-gold;
-}
-
-.project-u-color-sky-blue {
-  color: $project-color-sky-blue;
-}
-
-.project-u-color-gray-blue {
-  color: $project-color-gray-blue;
-}
-
-.project-u-color-pink {
-  color: $project-color-pink;
-}
-
-.project-u-color-blue-green {
-  color: $project-color-blue-green;
-}
-
-.project-u-color-material-to-be-reviewed {
-  color: $project-color-material-to-be-reviewed;
-}
+// Display
 
 .project-u-display-flex {
   display: flex;
@@ -1063,38 +970,6 @@
   max-width: 25rem;
 }
 
-.project-u-width-min-width-28 {
-  width: 28rem;
-  min-width: 28rem;
-  max-width: 28rem;
-}
-
-.project-u-width-min-width-30 {
-  width: 30rem;
-  min-width: 30rem;
-  max-width: 30rem;
-}
-
-.project-u-width-max-width-7 {
-  max-width: 7rem;
-}
-
-.project-u-width-max-width-9 {
-  max-width: 9rem;
-}
-
-.project-u-width-max-width-35 {
-  max-width: 35rem;
-}
-
-.project-u-min-width-0 {
-  min-width: 0;
-}
-
-.project-u-max-height-10 {
-  max-height: 10rem;
-}
-
 .project-u-overflow-auto {
   overflow: auto;
 }
@@ -1103,20 +978,8 @@
   border-bottom: 1px solid $project-color-primary;
 }
 
-.project-u-border-top-gray {
-  border-top: 1px solid $project-color-gray-01;
-}
-
-.project-u-button-styles-clear {
-  @include button-clear;
-}
-
 .project-u-border-bottom {
   border-bottom: 1px solid $project-color-gray-01;
-}
-
-.project-u-border-bottom-gray-02 {
-  border-bottom: 1px solid $project-color-gray-02;
 }
 
 .project-u-border-left {
@@ -1132,21 +995,6 @@
   border-radius: $project-radius-sm;
 }
 
-.project-u-border-box-sm-02 {
-  border: 1px solid $project-color-gray-02;
-  border-radius: $project-radius-sm;
-}
-
-.project-u-border-box-radius-sm {
-  border: 1px solid $project-color-gray-01;
-  border-radius: $project-radius-sm;
-  background: $project-color-white;
-}
-
-.project-u-border-amber-2 {
-  border: 2px solid $project-color-amber;
-}
-
 .project-u-border-danger {
   border: 1px solid $project-color-danger;
 }
@@ -1155,22 +1003,12 @@
   z-index: 2;
 }
 
-.project-u-max-width-38 {
-  max-width: 38rem;
-}
-
 .project-u-list-style-none {
   list-style: none;
 }
 
 .project-u-opacity-50 {
   opacity: 0.5;
-}
-
-.project-u-icon-postion {
-  top: 50%;
-  right: $project-gutter-sm;
-  transform: translateY(-50%);
 }
 
 .project-u-box-danger {
